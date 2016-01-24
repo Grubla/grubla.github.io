@@ -1,1 +1,15 @@
+<html>
+<head>
+<title>drunkr</title>
+<script src="//www.gstatic.com/cast/js/receiver/1.0/cast_receiver.js"></script>
+</head>
+<body>
+<div id='cast'></div>
 Hello World!!
+<script>
+    window.castElement = document.getElementById('cast');
+    window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
+    window.castReceiverManager.start();
+  </script>
+</body>
+</html>
