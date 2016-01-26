@@ -40,7 +40,7 @@ Hello World!!
         castReceiverManager.onSenderConnected = function(event) {
           console.log('Received Sender Connected event: ' + event.data);
           console.log(window.castReceiverManager.getSender(event.data).userAgent);
-	  displayText("Hello worldie");
+	  displayText(window.castReceiverManager.getSenders().length);
         };
         
         // handler for 'senderdisconnected' event
