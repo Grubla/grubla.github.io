@@ -4,7 +4,7 @@
 <script src="//www.gstatic.com/cast/js/receiver/1.0/cast_receiver.js"></script>
 </head>
 <body>
-<div id='cast'></div>
+<div id='message'></div>
 Hello World!!
 <script type="text/javascript">
       window.onload = function() {
@@ -22,11 +22,13 @@ Hello World!!
         castReceiverManager.onSenderConnected = function(event) {
           console.log('Received Sender Connected event: ' + event.data);
           console.log(window.castReceiverManager.getSender(event.data).userAgent);
+	  displayText("Hello worldie");
         };
         
         // handler for 'senderdisconnected' event
         castReceiverManager.onSenderDisconnected = function(event) {
           console.log('Received Sender Disconnected event: ' + event.data);
+	  displayText("disconnected");
           if (window.castReceiverManager.getSenders().length == 0) {
 	        window.close();
 	      }
