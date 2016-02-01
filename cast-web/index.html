@@ -102,9 +102,9 @@
       };
       
       function redrawList(){
-        var str = "SenderId Count Connected";
+        var text = "SenderId Count Connected";
         for(var client in window.clients){
-          str += client.senderId + " " + client.count + " " + client.isConnected + "<br>";
+          text += client.senderId + " " + client.count + " " + client.isConnected + "<br>";
         }
         document.getElementById("list").innerHTML=text;
       };
